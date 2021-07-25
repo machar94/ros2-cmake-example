@@ -1,0 +1,12 @@
+# - Config file for the math package
+# It defines the following variables
+#  math_INCLUDE_DIRS - include directories for FooBar
+#  math_LIBRARIES    - libraries to link against
+#  math_EXECUTABLE   - the bar executable
+
+set(math_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# These are IMPORTED targets created by mathTargets.cmake
+include("${CMAKE_CURRENT_LIST_DIR}/mathTargets.cmake")
+
+check_required_components(math)
